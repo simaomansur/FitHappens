@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="simaomansur.fithappens.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+    </fragment>
+
+    <!-- Workout List Fragment -->
+    <fragment
+        android:id="@+id/workoutListFragment"
+        android:name="simaomansur.fithappens.workout.WorkoutListFragment"
+        tools:layout="@layout/fragment_workout_list">
+        <action
+            android:id="@+id/action_workoutListFragment_to_workoutDetailFragment"
+            app:destination="@id/workoutDetailFragment" />
+    </fragment>
+
+    <!-- Workout Detail Fragment -->
+    <fragment
+        android:id="@+id/workoutDetailFragment"
+        android:name="simaomansur.fithappens.workout.WorkoutDetailFragment"
+        tools:layout="@layout/fragment_workout_detail">
+            <argument
+                android:name="workoutId"
+                app:argType="integer"
+                android:defaultValue="0" />
+    </fragment>
+
+    <!-- Calendar Fragment -->
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="simaomansur.fithappens.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <!-- Workouts Fragment -->
+    <fragment
+        android:id="@+id/navigation_workouts"
+        android:name="simaomansur.fithappens.ui.workouts.WorkoutsFragment"
+        android:label="@string/title_workouts"
+        tools:layout="@layout/fragment_workouts" />
+</navigation>
