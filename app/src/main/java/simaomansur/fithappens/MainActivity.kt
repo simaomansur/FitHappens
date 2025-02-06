@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import simaomansur.fithappens.databinding.ActivityMainBinding
+//comment
 
 class MainActivity : AppCompatActivity() {
 
