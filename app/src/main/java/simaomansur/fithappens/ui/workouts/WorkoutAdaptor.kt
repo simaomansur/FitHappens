@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import simaomansur.fithappens.R
-
-data class Workout(val id: Int, val name: String)
+import simaomansur.fithappens.model.Workout  // ✅ Use your real model
 
 class WorkoutAdapter(
     private val workouts: List<Workout>,

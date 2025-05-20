@@ -30,11 +30,11 @@
     <fragment
         android:id="@+id/workoutDetailFragment"
         android:name="simaomansur.fithappens.workout.WorkoutDetailFragment"
-        tools:layout="@layout/fragment_workout_detail">
-            <argument
-                android:name="workoutId"
-                app:argType="integer"
-                android:defaultValue="0" />
+        android:label="Workout Detail">
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
 
     <!-- Calendar Fragment -->

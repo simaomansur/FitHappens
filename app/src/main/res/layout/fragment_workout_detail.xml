@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -10,54 +9,22 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Example for one exercise entry -->
+        <!-- ✅ Workout Title -->
         <TextView
-            android:id="@+id/exerciseName"
+            android:id="@+id/workoutTitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exercise: Bench Press"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="Workout Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-        <!-- Inputs for each set -->
+        <!-- ✅ Dynamic container -->
         <LinearLayout
+            android:id="@+id/exerciseContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp">
-
-            <!-- Repeat this block for each set, or dynamically add views -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="8dp">
-
-                <EditText
-                    android:id="@+id/weightInput"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Weight"
-                    android:inputType="numberDecimal" />
-
-                <EditText
-                    android:id="@+id/repsInput"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Reps"
-                    android:inputType="number" />
-            </LinearLayout>
-        </LinearLayout>
-        <!-- You can add a button to save/update workout progress -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/saveWorkoutButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save Workout"
-            android:layout_marginTop="16dp" />
+            android:orientation="vertical" />
 
     </LinearLayout>
 </ScrollView>
